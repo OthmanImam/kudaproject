@@ -569,6 +569,26 @@ section {
 
 @media (max-width: 1023px) {
     /* ************ */
+    .navbar{
+       position: fixed;
+       top: 0;
+       left: 0;
+       width: 100%;
+       background: #fff;
+       z-index: 999;
+       display: flex;
+       justify-content: space-between;
+       align-items: center;
+       padding: 25px;
+       transition: background 0.3s;
+    }
+   .navbar ul{
+    height: 100vh;
+   }
+    .navbar li {
+      /* padding: 0 30px; */
+      line-height: 30px;
+    }
     .nav-links,
     .auth-wraper {
         display: none;
@@ -607,17 +627,27 @@ section {
         line-height: 3em !important;
 
     }
+    ul {
+      display: flex;
+    }
 /* ******************* */
 .navbar{
-    top: 8%;
+    top:9%;
+    }
+    .cokies p, a{
+      font-size: 17px;
+      
     }
     .cokies{
+      position: fixed;
+      z-index: 3000;
     border: none;
     width: 100%;
     left: 0;
     padding: 20px 0;
     margin:0;
     top: 0;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
     }
     main{
     padding: 40px 10px 0 10px;
