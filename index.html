@@ -25,28 +25,277 @@
   />
     <title>Kuda Money Institution</title>
     <link rel="stylesheet" href="/css/style.css">
+    <style>
+    /* General styles */
+/* .navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+} */
+
+/* Navigation links */
+/* .nav-links {
+    display: flex;
+    list-style: none;
+}
+
+.nav-links li a {
+    padding: 10px 15px;
+    text-decoration: none;
+    color: #333;
+} */
+
+/* Auth buttons */
+.auth-buttons {
+    display: flex;
+    align-items: center;
+}
+
+.auth-buttons a {
+    margin-left: 15px;
+    text-decoration: none;
+    color: var(--fa-primary-color);
+}
+
+/* Hamburger menu icon */
+.menu-toggle, .hamburger {
+    display: none;
+    cursor: pointer;
+}
+
+.menu-toggle i {
+    font-size: 24px;
+}
+.dropdown-logo{
+        display: none;
+    }
+/* Responsive Styles */
+@media (max-width: 768px) {
+    .nav-links,
+    .auth-wraper {
+        display: none;
+    }
+    .auth-buttons{
+        position: absolute;
+        right: 4.375rem;
+    }
+    .menu-toggle {
+        display: block;
+    }
+    .dropdown-logo{
+        display: flex;
+    }
+
+    .nav-links.active,
+    .auth-buttons.active {
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        position: absolute;
+        top: 100%;
+        left: 0;
+        background: #fff;
+        padding: 10px 0;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    }
+
+    .nav-links li {
+        text-align: justify;
+        border-bottom: 1px solid ghostwhite;
+        width: 100%;
+        line-height: 3em !important;
+
+    }
+}
+        
+    h2 {
+    text-align: center;
+    color: var(--fa-primary-color);
+    font-weight: 700;
+    margin: 0 auto;
+}
+
+.testimonials .cards {
+    display: flex;
+    justify-content: space-around;
+    padding: 0 20px;
+    flex-wrap: wrap;
+}
+
+.testimonials .card {
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    margin: 20px;
+    padding: 20px;
+    max-width: 300px;
+    flex: 1;
+}
+
+.testimonials .card p {
+    font-size: 16px;
+    line-height: 1.5;
+    margin-bottom: 20px;
+}
+
+.author {
+    display: flex;
+    align-items: center;
+}
+
+.avatar {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    overflow: hidden;
+    margin-right: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #4b2e83;
+    color: #fff;
+    font-weight: 700;
+    font-size: 20px;
+}
+
+.name {
+    font-weight: 600;
+}
+
+.partners .logos {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    padding: 20px;
+}
+
+.partners .logos img {
+    margin: 10px 20px;
+    max-width: 100px;
+}
+/* ************************ */
+.comparison-section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+}
+
+.comparison-table {
+    width: 100%;
+    max-width: 800px;
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    margin-top: 20px;
+}
+
+.comparison-table .header {
+    display: flex;
+    color:var(--fa-primary-color);
+    font-weight: 700;
+}
+
+.comparison-table .header .column {
+    flex: 1;
+    text-align: center;
+    padding: 15px;
+}
+
+.comparison-table .row {
+    display: flex;
+    border-bottom: 1px solid #eee;
+}
+
+.comparison-table .row:last-child {
+    border-bottom: none;
+}
+
+.comparison-table .cell {
+    flex: 1;
+    text-align: justify;
+    padding: 15px;
+}
+
+.comparison-table .cell.feature {
+    
+}
+
+@media (max-width: 768px) {
+    main{
+        display: grid;
+        margin: 0 auto;
+    }
+    .kuda-section{
+        max-width: 100%;
+    }
+    .comparison-table .row, .comparison-table .header {
+        flex-direction: column;
+    }
+    .comparison-table .cell, .comparison-table .header .column {
+        padding: 10px;
+        text-align: left;
+    }
+
+    .comparison-table .cell.feature {
+        text-align: center;
+    }
+    .hamburger {
+                display: flex;
+                flex-direction: column;
+                justify-content: space-around;
+                width: 30px;
+                height: 25px;
+                cursor: pointer;
+            }
+    
+            .hamburger span {
+                background-color: #333;
+                height: 3px;
+                border-radius: 2px;
+                width: 100%;
+                transition: 0.3s;
+            }
+}   
+/* ******************** */
+    </style>
 </head>
 <body>
     <header>
         <nav class="navbar">
             <div class="logo">
                 <a href="#"><img src="image/logo1.png" alt="Kuda Logo" class="logo"></a>
-                <ul class="nav-links">
-                    <li><a href="#">Personal <i class="fa-solid fa-caret-down" style="color: #06307a;"></i></a></li>
-                    <li><a href="#">Business <i class="fa-solid fa-caret-down" style="color: #06307a;"></i></a></li>
-                    <li><a href="#">Company <i class="fa-solid fa-caret-down" style="color: #06307a;"></i></a></li>
-                    <li><a href="#">Help <i class="fa-solid fa-caret-down" style="color: #06307a;"></i></a></li>
-                </ul>
             </div>
+            <ul class="nav-links" id="nav-links">
+                <div class="dropdown-logo">
+                    <img src="logo1.png" alt="Logo 1">
+                    <img src="logo2.png" alt="Logo 2">
+                </div>
+                <li><a href="#">Personal <i class="fa-solid fa-caret-down"></i></a></li>
+                <li><a href="#">Business <i class="fa-solid fa-caret-down"></i></a></li>
+                <li><a href="#">Company <i class="fa-solid fa-caret-down"></i></a></li>
+                <li><a href="#">Help <i class="fa-solid fa-caret-down"></i></a></li>
+            </ul>
             <div class="auth-buttons">
+                <div class="auth-wraper">
                 <a href="#" class="sign-in">Sign In</a>
                 <a href="#" class="join-kuda">Join Kuda</a>
-                <div class="country">
-                    <span style="margin-left: 1.25rem;"><a href=""><img src="/image/nija.png" alt=""></a></span>
                 </div>
+                <div class="country">
+                <span style="margin-left: 1.25rem;"><a href=""><img src="/image/nija.png" alt=""></a></span>
+                </div>
+            </div>
+            <div class="menu-toggle hamburger" id="mobile-menu">
+                <span></span>
+                <span></span>
+                <!-- <i class="fa fa-bars"></i> -->
             </div>
         </nav>
     </header>
+    
 <main>
     <section class="kuda-section hero">
         <div class="hero-text">
@@ -68,7 +317,7 @@
             <h3>Order a Kuda Visa card on the app with pickup and delivery options.</h3>
         </div>
         <div class="card">
-            <div class="card-icon"><i class="fa-sharp fa-solid fa-chart-pie-simple" style="color: #062356;"></i>
+            <div class="card-icon"><i class="fa-sharp fa-solid fa-chart-pie-simple"></i>
             </div>
             <h3>Enjoy cashless payment options online and offline.</h3>
         </div>
@@ -77,11 +326,11 @@
             <h3>Pay your essential bills and buy gift cards easily.</h3>
         </div>
         <div class="card">
-            <div class="card-icon">💸</div>
+            <div class="card-icon"><i class="fa-solid fa-arrow-up"></i></div>
             <h3>Get 25 free transfers to Nigerian banks every month.</h3>
         </div>
         <div class="card">
-            <div class="card-icon">💰</div>
+            <div class="card-icon"><i class="fa-solid fa-piggy-bank"></i></div>
             <h3>Save money automatically any time you spend.</h3>
         </div>
     </section>
@@ -93,7 +342,7 @@
         </div>
         <div class="hero-image">
             <div class="circle">
-                <img src="image/Group (2).png" alt="" style="height: 150px;">
+                <img src="image/img_2.png" alt="" style="height: 150px;">
             </div>
         </div>
     </section>
@@ -155,6 +404,114 @@
             <a href="">See all our fees </a>
         </div>
     </section>
+    <!-- ********** -->
+     <section class="testimonials">
+        <h2>Don't just take our word for it</h2>
+        <div class="cards">
+            <div class="card">
+                <p>Just joined the best Digital Bank in Nigeria. I have no complaints whatsoever since I started using Kuda.</p>
+                <div class="author">
+                    <div class="avatar">T</div>
+                    <div class="name">Tomasinv</div>
+                </div>
+            </div>
+            <div class="card">
+                <p>Never thought an app would stylish become my everyday way to bank and have access to physical cash. @kudabank is sleek</p>
+                <div class="author">
+                    <img src="babajide.jpg" alt="Babajide Duroshola" class="avatar">
+                    <div class="name">Babajide Duroshola</div>
+                </div>
+            </div>
+            <div class="card">
+                <p>This is the best banking app! I'm enjoying seamless banking plus the free transfers to other banks is a thing of joy. This is what I call freedom. I've made Kuda my main bank account and I'm gonna refer all my friends!</p>
+                <div class="author">
+                    <img src="realsok.jpg" alt="RealSOK" class="avatar">
+                    <div class="name">@RealSOK_</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="partners">
+        <div class="logos">
+            <img src="techcrunch.png" alt="TechCrunch">
+            <img src="worldeconomicforum.png" alt="World Economic Forum">
+            <img src="image/fintech.png" alt="Fintech Futures">
+            <img src="/image/bbc.png" alt="BBC">
+            <img src="/image/cnbc.png" alt="CNBC Africa">
+            <img src="image/" alt="Euromoney">
+        </div>
+    </section>
+    <!-- <section class="kuda-section section5">
+        <div class="testimonial">
+           
+            <p class="testimonial-text"></p>
+            <div class="testimonial-image">
+                <img src="/image/user.png" alt="User">
+                <span></span>
+        </div>
+        <div class="testimonial">
+            <p class="testimonial-text"></p>
+            <div class="testimonial-image">
+                <img src="/image/user.png" alt="User">
+                <span></span>
+        </div>
+        </div>
+        <div class="testimonial">
+            <p class="testimonial-text"></p>
+            <div class="testimonial-image">
+                <img src="/image/user.png" alt="User">
+                <span></span>
+        </div>
+        </div>
+        </div>
+    </section> -->
+    <!-- ******************* -->
+    <section class="comparison-section">
+        <h2>Choose the freedom you need.</h2>
+        <div class="comparison-table">
+            <div class="header">
+                <div class="column">Other Banks</div>
+                <div class="column">Kuda</div>
+            </div>
+            <div class="row">
+                <div class="cell feature">Transfer Fee</div>
+                <div class="cell">Up to ₦50 plus V.A.T.</div>
+                <div class="cell">25 free transfers every month</div>
+            </div>
+            <div class="row">
+                <div class="cell feature">Card Delivery</div>
+                <div class="cell">😕</div>
+                <div class="cell">Yes</div>
+            </div>
+            <div class="row">
+                <div class="cell feature">Card Maintenance Fee</div>
+                <div class="cell">Up to ₦50 per quarter</div>
+                <div class="cell">No</div>
+            </div>
+            <div class="row">
+                <div class="cell feature">Alerts</div>
+                <div class="cell">Charge for SMS alerts</div>
+                <div class="cell">Free instant notifications</div>
+            </div>
+            <div class="row">
+                <div class="cell feature">Annual Interest</div>
+                <div class="cell">4%</div>
+                <div class="cell">Up to 15%</div>
+            </div>
+            <div class="row">
+                <div class="cell feature">Bill Payment Fee</div>
+                <div class="cell">Up to ₦100 per bill</div>
+                <div class="cell">No</div>
+            </div>
+            <div class="row">
+                <div class="cell feature">Instant Reversals</div>
+                <div class="cell">😕</div>
+                <div class="cell">Yes</div>
+            </div>
+        </div>
+    </section>
+     <!-- ************** -->
     <section class="content">
         <div class="content-wrapper" style="display: flex;">
             <div class="content-logo">
@@ -216,18 +573,19 @@
             </div>
         </div>
     </section>
+
     <footer>
         <div class="footer-content">
             <div class="app-links">
-                <a href="#"><img src="/image/Link.png" alt="Download on the App Store"></a>
-                <a href="#"><img src="/image/Link (1).png" alt="Get it on Google Play"></a>
-                <a href="#"><img src="/image/Container.png" alt="Sign in on the Web"></a>
+                <a href="#"><img src="/image/appstore.png" alt="Download on the App Store"></a>
+                <a href="#"><img src="/image/playstore.png" alt="Get it on Google Play"></a>
+                <a href="#"><img src="/image/webkuda.png" alt="Sign in on the Web"></a>
             </div>
             <p class="disclaimer">Products may vary by country or market.</p>
             <div class="contact-info">
                 <div class="contact-item">
                     <h5>Contact</h5>
-                    <a href="mailto:help@kuda.com">help@kuda.com</a>
+                    <a href="mailto:help@kuda.com" style="color: #4b2e83;">help@kuda.com</a>
                     <div class="social-links">
                         <a href="#"><i class="fab fa-x"></i></a>
                         <a href="#"><i class="fab fa-instagram fa-circle"></i></a>
@@ -266,13 +624,14 @@
     </footer>
 </main>
 <div class="dismises "><p>By using this website you agree to our <a href="">cookie policy.</a></p><a href="">Dismiss</a></div>
+<script>
+    const menuToggle = document.getElementById('mobile-menu');
+    const navLinks = document.getElementById('nav-links');
+
+    menuToggle.addEventListener('click', () => {
+        navLinks.classList.toggle('active');
+    });
+</script>
+
 </body>
 </html>
-
-<div class="mobile-toggle">
-    <div class="kuda-hamburger">
-    <div class="kuda-hamburger--inner">
-
-</div>
-</div>
-</div>

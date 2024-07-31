@@ -1,5 +1,6 @@
 
         @import url('https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css');
+        @import url('https://fonts.googleapis.com/css2?family=Mulish:wght@200;300;400;500;600;700;800;900&display=swap');
     :root{
         tab-size: 4;
     --primaryColor: #40196d;
@@ -36,7 +37,8 @@
         margin: 0;
         padding: 0;
     }
-body {
+    body {
+    font-family: 'Mulish', sans-serif;
    display: grid 
 }
 main{
@@ -45,8 +47,8 @@ main{
     margin-right: auto;
     width: 100%;
     transition: transform .8s;
-    padding: 40px 40px 55px;
-    margin-top: 58px;
+    padding: 40px 40px 0 55px;
+    /* margin-top: 58px; */
     max-width: 991px;
     min-height: calc(100vh - 120px);
     transform: translateY(0)!important;
@@ -87,7 +89,7 @@ main{
 
 .nav-links a {
     text-decoration: none;
-    color: #333;
+    color:var(--primaryColor);
     font-weight: bold;
     transition: color 0.3s;
 }
@@ -104,26 +106,25 @@ main{
 .auth-buttons .sign-in {
     margin-right: 20px;
     text-decoration: none;
-    color: #0073e6;
+    color: var(--primaryColor);
     font-weight: bold;
 }
 
 .auth-buttons .join-kuda {
     text-decoration: none;
     color: #fff;
-    background-color: #0073e6;
+    background-color: var(--primaryColor);
     padding: 10px 20px;
     border-radius: 5px;
     font-weight: bold;
-    transition: background-color 0.3s;
+    transition: 1s;
 }
 
 .auth-buttons .join-kuda:hover {
     background-color: #005bb5;
+    transform: translateY(-10px);
 }
 .kuda-section{
-    /* margin-top: 7.1172rem; */
-    height: 25rem;
     width: 56.9375rem;
     border: 0;
     font: inherit;
@@ -191,13 +192,13 @@ main{
     } */
 }
 .card-section {
+    max-width: 100%;
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
     gap: 20px;
-    background-color: #f9f9f9;
     /* margin: 4.375rem 8.125rem 4em 8.125rem; */
-    padding: 4.375rem 2.5rem 3.9375rem 2.5rem;
+    /* padding: 4.375rem 2.5rem 3.9375rem 2.5rem; */
 }
 
 .card {
@@ -214,11 +215,12 @@ main{
 .card-icon {
     font-size: 1.5625rem;
     margin-bottom: .325rem;
+    color: var(--primaryAlt);
 }
 
 .card h3 {
     font-size: 14px;
-    color: #333;
+    color: var(--primaryColor);
 }
 
 .card:hover {
@@ -245,19 +247,18 @@ vertical-align: baseline;
 color: var(--primaryColor);
 font-weight: 900;
 margin-bottom: 20px;
-font-size: 1.5rem;
+font-size: 2rem;
 line-height: 1.38;
     }
-    .circle{
-        width: 200px;
-        height: 200px;
-        border-radius: 100px;
+    /* .circle{
+        width: 300px;
+        height: 300px;
+        border-radius: 200px;
         border: 1px solid ghostwhite;
         background:var(--offBlueTran) ;
-    }
+    } */
     .circle img{
-        position: relative;
-        top: 43px;
+       
     }
     /* last section and FOOter */
     .content {
@@ -270,26 +271,22 @@ line-height: 1.38;
     margin: 0 auto;
 }
 
-.content-logo img {
-    height: 30px;
-}
-
 .content-columns {
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
-    margin-top: -20px;
 }
 
 .column {
     flex: 1;
-    min-width: 100px;
+    min-width: 200px;
     margin: 0 20px;
 }
 
 .column h4 {
     font-size: 18px;
     margin-bottom: 10px;
+    color: var(--primaryColor);
 }
 
 .column ul {
@@ -345,13 +342,15 @@ line-height: 1.38;
     justify-content: space-between;
     gap: 10px;
     text-align: left;
+    flex: 1 0 140px;
 }
 
 .contact-item {
     /* flex-wrap: wrap; */
     text-wrap: wrap;
-    max-width: 150px;
+    max-width: 125.7px;
     margin: 10px 20px;
+    color: var(--primaryAlt);
 }
 
 .contact-item h5 {
@@ -361,8 +360,11 @@ line-height: 1.38;
 
 .contact-item p, .contact-item a {
     font-size: 14px;
-    color: #333;
+    color: rgb(18, 18, 19);
     text-decoration: none;
+    a{
+        color: var(--primaryAlt);
+    }
 }
 
 .contact-item a:hover {
@@ -380,7 +382,7 @@ line-height: 1.38;
 
 .social-links a {
     text-decoration: none;
-    color: #333;
+    color: var(--primaryColor);
     font-size: 12px;
     padding: 8px 8px;
     display: flex;
@@ -478,3 +480,5 @@ line-height: 1.38;
     font: inherit;
 
  }
+ 
+ 
