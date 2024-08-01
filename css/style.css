@@ -26,9 +26,9 @@
   --overlay: rgba(64, 25, 109, 0.2);
   --successColorTrans: #dcffec;
   .color-black {
-    color: var(--blackColor);
-    font-size: 1.2rem;
-    line-height: 2rem;
+    font-size: 1.375rem; 
+    color: var(--blackColor); 
+    font-weight: 600;
   }
 }
 * {
@@ -763,7 +763,9 @@ section {
     }
     .join-kuda-link,
     p {
-        font-size: 1.2em;
+      font-size: 1.375rem; 
+      color: var(--blackColor); 
+      font-weight: 600;
     }
     }
     .image-content{
