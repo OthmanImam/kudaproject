@@ -151,6 +151,7 @@ section {
       color: var(--primaryColor);
       font-weight: 900;
       font-size: 2.25rem;
+      text-align: left;
     }
     .join-kuda-link,
     p {
@@ -180,7 +181,7 @@ section {
       background-color: #fff;
       border-radius: 10px;
       box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
-      padding: 20px;
+      padding: 30px;
       width: calc(33% - 40px);
       box-sizing: border-box;
       text-align: justify;
@@ -192,7 +193,7 @@ section {
       color: var(--primaryAlt);
     }
     .card h3 {
-      font-size: 14px;
+      font-size: 16px;
       color: var(--primaryColor);
     }
 /* cokies */
@@ -267,15 +268,14 @@ section {
 }
 
 /* last section and FOOter */
-.content {
-  background-color: #fff;
-  /* margin: 4.375rem 8.125rem 4em 8.125rem; */
-  padding: 4.375rem 2.5rem 3.9375rem 2.5rem;
-}
-
 .content-wrapper {
-  max-width: 1200px;
+  display: flex;
+  max-width: 100%;
+  width: 100%;
   margin: 0 auto;
+  gap: 2em;
+  justify-content: space-between;
+  padding: 2em;
 }
 
 .content-columns {
@@ -286,7 +286,6 @@ section {
 
 .column {
   flex: 1;
-  min-width: 200px;
   margin: 0 20px;
 }
 
@@ -300,6 +299,8 @@ section {
   list-style: none;
   padding: 0;
   margin: 0;
+  display: flex;
+  flex-direction: column;
 }
 
 .column ul li {
@@ -317,8 +318,9 @@ section {
 }
 
 .footer-content {
-  line-height: 30px;
-  max-width: 1200px;
+  line-height: 25px;
+  max-width: 100%;
+  width: 100%;
   /* margin: 4.375rem 8.125rem 4em 8.125rem; */
   padding: 4.375rem 2.5rem 3.9375rem 2.5rem;
   text-align: center;
@@ -410,6 +412,10 @@ section {
   text-align: justify;
   font-size: 0.875rem;
   color: var(--textColor);
+  p{
+    margin-top: 0.5rem;
+
+  }
 }
 
 .kuda-cookie {
@@ -514,7 +520,7 @@ section {
 .comparison-table {
     width: 100%;
     flex-direction: column;
-    max-width: 90%;
+    max-width: 100%;
     background-color: #fff;
     border-radius: 8px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
@@ -524,22 +530,17 @@ section {
 
 .comparison-table .header {
     display: flex;
-    font-size: 40px;
+    font-size: 30px;
     color:var(--primaryAlt);
-    font-weight: 700;
+    font-weight: 900;
+    text-align: center;
   }
   h1{
-    font-size: 2.5rem;
+    font-size: 2rem;
     font-weight: 900;
     text-align: center;
     color: var(--primaryAlt);
   }
-
-.comparison-table .header .column {
-    flex: 1;
-    text-align: center;
-    padding: 15px;
-}
 
 .comparison-table .row {
     display: flex;
@@ -582,11 +583,14 @@ section {
        padding: 25px;
        transition: background 0.3s;
     }
+    .logo{
+      height: 25px;
+    }
    .navbar ul{
     height: 100vh;
    }
     .navbar li {
-      /* padding: 0 30px; */
+      padding: 0 30px;
       line-height: 30px;
     }
     .nav-links,
@@ -632,7 +636,7 @@ section {
     }
 /* ******************* */
 .navbar{
-    top:9%;
+    top:11%;
     }
     .cokies p, a{
       font-size: 17px;
@@ -676,6 +680,7 @@ section {
     color: var(--primaryColor);
     font-weight: 800;
     font-size: 2rem;
+    text-align: center;
     }
     .join-kuda{
         max-width: 50px;
@@ -711,29 +716,54 @@ section {
     .card{
       max-width: 100%;
       width: 100%;
+      gap: 30px;
     }
     .testimonial{
-      flex-direction: column;
+      flex-wrap: wrap;
+      /* flex-direction: column; */
       h3{
         margin-bottom: 1.25rem;
         color: var(--primaryColor) !important;
       }
+      p{
+        font-size: 20px;
+      }
+      .name{
+        font-weight: 700;
+        font-size: 20px;
+      }
+      
+    }
+    .testimonial-header{
+      font-size: 30px;
+      margin-bottom: 20px;
+      text-wrap: wrap;
+      width: 80%;
+    }
+    .content-wrapper {
+      display: flex;
+      flex-direction: column;
     }
     /* nav */
    
     /* ** */
    
     .comparison-table .row, .comparison-table .header {
-        flex-direction: column;
-    }
-    .comparison-table .cell, .comparison-table .header .column {
-        padding: 10px;
-        text-align: left;
+        /* flex-direction: column; */
+        display: flex;
+        justify-content: center;
+        font-size: 30px;
+      }
+      .comparison-table .cell, .comparison-table .header .column {
+        /* padding: 10px; */
+        font-size: 17px;
+        text-align: right;
     }
 
     .comparison-table .cell.feature {
         text-align: center;
     }
+    
     .hamburger {
                 display: flex;
                 flex-direction: column;
@@ -751,12 +781,16 @@ section {
                 transition: 0.3s;
             }
             .card {
-              width: calc(50% - 40px);
+              width: calc(100% - 40px);
+              font-size: 2.875rem;
             }
  
 
 }  
 @media (max-width: 480px) {
+  .navbar{
+    top:9%;
+    }
   .card {
     width: calc(100% - 40px);
   }
