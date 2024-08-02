@@ -181,7 +181,10 @@ section {
   max-width: 100%;
   width: 100%;
   font: inherit;
-  margin-top: 12.5%;
+  margin-top: 8%;
+}
+.hero{
+  margin-top: 5% !important;
 }
 .div-wrapper{
   display: flex;
@@ -568,7 +571,7 @@ section {
 }
 
 .partners .logos img {
-    margin: 10px 20px;
+    margin: 10px 15px;
     max-width: 100px;
 }
 /* ************************ */
@@ -618,9 +621,91 @@ section {
     text-align: justify;
     padding: 15px;
 }
+ /* section 13 and 14 */
+.more-for-you {
+  text-align: center;
+  margin-top: 2rem;
+}
 
-.comparison-table .cell.feature {
-    
+.more-for-you h2 {
+  font-size: 2rem;
+  margin-bottom: 1.5rem;
+}
+
+.cads {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
+.cad {
+  background-color: #fff;
+  border: 1px solid #ddd;
+  border-radius: 0.5rem;
+  width: 25%;
+  padding: 1.5rem;
+  box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.1);
+  margin-bottom: 1.5rem;
+}
+
+.cad h3 {
+  font-size: 1.5rem;
+  margin-bottom: 1rem;
+}
+
+.cad p {
+  font-size: 1rem;
+  margin-bottom: 1.5rem;
+}
+
+.cad a {
+  color: #6a0dad;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.main-banner {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #f0f0ff;
+  padding: 2rem;
+  border-radius: 0.5rem;
+  margin-top: 2rem;
+}
+
+.banner-content {
+  max-width: 50%;
+}
+
+.banner-content h2 {
+  font-size: 2.5rem;
+  color: #4a00e0;
+  margin-bottom: 1rem;
+}
+
+.banner-content p {
+  font-size: 1.25rem;
+  margin-bottom: 2rem;
+}
+
+.join-button {
+  background-color: #4a00e0;
+  color: #fff;
+  padding: 1rem 2rem;
+  text-decoration: none;
+  border-radius: 0.5rem;
+  font-size: 1rem;
+  transition: background-color 0.3s ease;
+}
+
+.join-button:hover {
+  background-color: #3b00b2;
+}
+
+.banner-image img {
+  max-width: 100%;
+  height: auto;
 }
 
 /* ********************* */
@@ -632,6 +717,9 @@ section {
 
 @media (max-width: 1023px) {
     /* ************ */
+    .hero{
+      margin-top: 10em !important;
+    }
     .navbar{
        position: fixed;
        top: 0;
@@ -735,9 +823,10 @@ section {
       max-width: 100%;
         display: flex;
         gap: 1.25rem;
-        margin-top: 5em;
+        margin-top: 2em;
         justify-content: center;
       }
+     
       .revers{
        flex-direction: column-reverse !important; 
       }
@@ -841,7 +930,35 @@ section {
     .comparison-table .cell.feature {
         text-align: center;
     }
-    
+   
+    /* *** */
+    /* section 13 and 14 */
+    .cads{
+      flex-direction: column;
+      width: 100%;
+      align-items: center;
+    }  
+    .cad{
+      width: 90%;
+    }
+   
+    .main-banner{
+      max-width: 90%;
+      flex-direction: column;
+      padding: 1em;
+      gap: 3.125rem;
+    }
+    .banner-content{
+      max-width: 100%;
+      width: 80%;
+      align-items: center;
+      text-align: center;
+    }
+    .banner-image{
+      width: 100%;
+      align-items: center;
+    }
+    /* *** */
     .hamburger {
                 display: flex;
                 flex-direction: column;
@@ -862,22 +979,42 @@ section {
               width: calc(100% - 40px);
               font-size: 2.875rem;
             }
-            .app-links img {
-              height: 50%;
+            .app-links {
+              height: 80%;
+              display: flex;
+              /* flex-direction: column; */
+              flex-wrap: wrap;
+            }
+            .app-links img{
+              height: 80%;
             }
  
             .dropdown:hover .dropdown-content {
               display: none;
           }
+          .partners .logos{
+            height: 10% !important;
+            /* flex-direction: column !important; */
+          }
 }  
-@media (max-width: 480px) {
+@media (max-width: 490px) {
   .navbar{
-    top:8%;
+    top:9%;
     }
   .card {
     width: calc(100% - 40px);
   }
-  .app-links img {
-    height: 70%;
+  .app-links {
+    height: 80%;
+    display: flex;
+    /* flex-direction: column; */
+    flex-wrap: wrap;
   }
+  .app-links img{
+    height: 80%;
+  }
+  .banner-content h2{
+    font-size: 200%;
+  }
+  
 }
