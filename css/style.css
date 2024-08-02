@@ -43,6 +43,46 @@
 body {
   font-family: "Mulish", sans-serif;
 }
+/* cokie styling */
+.cookie-banner {
+  width:50%;
+  background-color: #e0e0ff;
+  padding: 0.5rem 1rem;
+  box-shadow: 0 0 5px;
+  border-radius:5px;
+  background:#fff;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: fixed;
+  top: 85%;
+  left:25%;
+  z-index: 10000;
+}
+
+.cookie-banner p {
+  margin: 0;
+}
+
+.cookie-banner a {
+  color: var(--primaryColor);
+}
+
+.dismiss-button {
+  background-color:var(--primaryColor);
+  border: 1px solid ;
+  color: #fff;
+  padding: 0.5rem 1rem;
+  border-radius: 0.4rem;
+  cursor: pointer;
+  font-size: 1rem;
+}
+
+.dismiss-button:hover {
+  background-color: var(--primaryColor);
+  color: var(--white);
+}
+
 /* header styling*/
     .navbar {
         position: fixed;
@@ -251,44 +291,6 @@ section {
       color: var(--primaryColor);
     }
 /* cokies */
-.cokie {
-  position: fixed;
-  display: flex;
-  top: 85%;
-  left: 30%;
-  width: 40%;
-  align-items: center !important;
-  background: #fbfbfb;
-  border: 1px solid #dfe3ff;
-  border-radius: 10px;
-  box-shadow: 0 0 25px rgba(0, 0, 0, 0.06);
-  text-align: center;
-  padding: 8px;
-  font-weight: bold;
-  transition: box-shadow 0.3s;
-
-  p {
-    font-size: 12px;
-  }
-  .dismise {
-    border: none;
-    margin-left: auto;
-    margin-right: 20px;
-    background: #a4caf0;
-    color: rgb(24, 3, 49);
-    text-decoration: none;
-    padding: 8px;
-    font-size: 13px;
-    border-radius: 8px;
-    transition: box-shadow 0.3s;
-    box-shadow: 0 0 25px rgba(0, 0, 0, 0.06);
-
-  }
-  .dismise:hover {
-    transform: scale(1/1);
-    color: #005bb5;
-  }
-}
 .card:hover {
   box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
 }
@@ -480,10 +482,6 @@ section {
 
   }
 }
-
-.kuda-cookie {
-  font: inherit;
-}
 /* ********************** */
 /* Auth buttons */
 .auth-buttons {
@@ -494,7 +492,7 @@ section {
 .auth-buttons a {
     margin-left: 15px;
     text-decoration: none;
-    color: var(--fa-primary-color);
+    color: var(--primaryColor);
 }
 
 /* Hamburger menu icon */
@@ -630,6 +628,8 @@ section {
 .more-for-you h2 {
   font-size: 2rem;
   margin-bottom: 1.5rem;
+  color:var(--primaryColor);
+  font-weight:800;
 }
 
 .cads {
@@ -651,6 +651,7 @@ section {
 .cad h3 {
   font-size: 1.5rem;
   margin-bottom: 1rem;
+  color:var(--primaryColor);
 }
 
 .cad p {
@@ -659,7 +660,7 @@ section {
 }
 
 .cad a {
-  color: #6a0dad;
+  color: var(--primaryColor);
   text-decoration: none;
   font-weight: bold;
 }
@@ -680,7 +681,7 @@ section {
 
 .banner-content h2 {
   font-size: 2.5rem;
-  color: #4a00e0;
+  color: var(--primaryColor);
   margin-bottom: 1rem;
 }
 
@@ -690,7 +691,7 @@ section {
 }
 
 .join-button {
-  background-color: #4a00e0;
+  background-color:var(--primaryColor);
   color: #fff;
   padding: 1rem 2rem;
   text-decoration: none;
@@ -707,7 +708,46 @@ section {
   max-width: 100%;
   height: auto;
 }
+.mobile-footer {
+  background-color: var(--primaryColor);
+  color: #fff;
+  display: none;
+  justify-content: space-between;
+  position:fixed;
+  align-items: center;
+  padding: 1rem;
+  box-shadow: 0 0 5px 0.5px #000;
+}
 
+.footer-logo {
+  font-size: 2rem;
+}
+.footer-logo img{
+  height:50px;
+  box-shadow:0 0 1px ;
+  border-radius:10px;
+  transition:2s;
+  &:hover{
+    transform: scale(1/1);
+  }
+}
+.footer-rating {
+  font-size: 1rem;
+}
+
+.footer-button {
+  background-color: var(--white);
+  color: var(--primary-color);
+  padding: 0.5rem 1rem;
+  text-decoration: none;
+  border-radius: 0.5rem;
+  font-size: 1rem;
+  transition: background-color 0.3s ease;
+}
+
+.footer-button:hover {
+  background-color: #ccc;
+}
 /* ********************* */
 @media screen and (max-width: 1024px) {
   .hero-text {
@@ -717,21 +757,29 @@ section {
 
 @media (max-width: 1023px) {
     /* ************ */
+    /* cokie */
+    .cookie-banner {
+      max-width:100%;
+      width:100%;
+      padding: 0.7rem 1rem;
+      position: sticky;
+      top: 0;
+      left:25%;
+      z-index: 10000;
+    }
+    /* cont */
     .hero{
       margin-top: 8em !important;
     }
     .navbar{
-       position: fixed;
-       top: 0;
-       left: 0;
-       width: 100%;
-       background: #fff;
-       z-index: 999;
-       display: flex;
-       justify-content: space-between;
-       align-items: center;
-       padding: 25px;
-       transition: background 0.3s;
+      background-color: #fff;
+      padding: 1rem;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      border-bottom: 1px solid #ddd;
+      position:fixed;
+      width:100%;
     }
     .logo{
       height: 25px;
@@ -795,24 +843,7 @@ section {
       display: flex;
     }
 /* ******************* */
-.navbar{
-    top:4em;
-    }
-    .cokie p, a{
-      font-size: 17px;
-      
-    }
-    .cokie{
-      position: fixed;
-      z-index: 3000;
-    border: none;
-    width: 100%;
-    left: 0;
-    padding: 20px 0;
-    margin:0;
-    top: 0;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-    }
+
     main{
     padding: 40px 10px 0 10px;
     max-width: 100%;
@@ -996,11 +1027,15 @@ section {
             height: 10% !important;
             /* flex-direction: column !important; */
           }
+          .mobile-footer {
+            display:flex;
+            width:100%;
+            bottom:0;
+            left:0;
+            posion:fixed !important;
+          }
 }  
 @media (max-width: 490px) {
-  .navbar{
-    top:5em;
-    }
   .card {
     width: calc(100% - 40px);
   }

@@ -13,6 +13,10 @@
         <link rel="stylesheet" href="/css/style.css">
     </head>
 <body>
+    <div id="cookie-banner" class="cookie-banner">
+        <p>By using this website you agree to our <a href="#">cookie policy</a>.</p>
+        <button id="dismiss-button" class="dismiss-button">Dismiss</button>
+    </div>
     <header>
         <nav class="navbar">
             <div class="nav-links-wraper">
@@ -433,19 +437,22 @@
     </footer>
 </div>
 </main>
-<div class="cokie" id="cokie"><p>By using this website you agree to our <a href="" style="font-size: .75rem;">cookies policy.</a></p><button id="dismise" class="dismise">Dismiss</button></div>
+<div class="mobile-footer">
+    <div>
+        <div class="footer-logo"><img src="/image/k.png" alt="kuda logo"> </div>
+        <div class="footer-rating">★★★★★</div>
+    </div>
+    <a href="#" class="footer-button">Get the App</a>
+</div>
 <script>
+     document.getElementById('dismiss-button').addEventListener('click', function() {
+    document.getElementById('cookie-banner').style.display = 'none';
+});
     const menuToggle = document.getElementById('mobile-menu');
     const navLinks = document.getElementById('nav-links');
-    const cookie = document.getElementById('cookie');
-    const dismiss = document.getElementById('dismiss');
 
     menuToggle.addEventListener('click', () => {
         navLinks.classList.toggle('active');
-    });
-
-    dismiss.addEventListener('click', () => {
-        cookie.classList.add('deactivate');
     });
 </script>
 
