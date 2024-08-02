@@ -718,7 +718,7 @@ section {
 @media (max-width: 1023px) {
     /* ************ */
     .hero{
-      margin-top: 10em !important;
+      margin-top: 8em !important;
     }
     .navbar{
        position: fixed;
@@ -796,7 +796,7 @@ section {
     }
 /* ******************* */
 .navbar{
-    top:11%;
+    top:4em;
     }
     .cokie p, a{
       font-size: 17px;
@@ -999,7 +999,7 @@ section {
 }  
 @media (max-width: 490px) {
   .navbar{
-    top:9%;
+    top:5em;
     }
   .card {
     width: calc(100% - 40px);
