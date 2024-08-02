@@ -938,6 +938,9 @@ section {
       text-wrap: wrap;
       width: 80%;
     }
+    .testimonial .card {
+      max-width:80%;
+    }
     .content-wrapper {
       display: flex;
       flex-direction: column;
