@@ -231,7 +231,7 @@ section {
   gap: 3.125rem;
 }
 .image-content{
-  border: 1px solid red;
+  /* border: 1px solid red; */
   padding: .625rem;
     max-width: 40%;
 }
