@@ -91,7 +91,7 @@ body {
         display: flex;
         justify-content: space-between;
         align-items: center;
-        padding: 10px 5%;
+        padding: 10px 3%;
         background-color: #fff;
         box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
         z-index: 1000;
@@ -210,9 +210,9 @@ body {
 
 main {
   color: var(--textColor);
-  margin: auto;
+  margin: 0 auto;
   width: 100%;
-  padding: 40px 6.25rem 0 100px;
+  padding: 40px 6.25rem 0 110px;
   transform: translateY(0) !important;
 }
 section {
@@ -231,6 +231,7 @@ section {
   gap: 3.125rem;
 }
 .image-content{
+  border: 1px solid red;
   padding: .625rem;
     max-width: 40%;
 }
@@ -507,7 +508,10 @@ section {
 .dropdown-logo{
         display: none;
     }
-/* Responsive Styles */    
+/* Responsive Styles */  
+.testimonial .div-wrapper3{
+  justify-content: space-between;
+}  
     .testimonial-header {
       margin-bottom: 5rem;
     text-align: center;
